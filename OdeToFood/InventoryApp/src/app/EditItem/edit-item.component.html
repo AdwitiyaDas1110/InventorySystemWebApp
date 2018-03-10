@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+
+</head>
+<body>
+  <div class="container">
+    <form #form="ngForm" novalidate>
+      <div class="form-group">
+        <label for="ItemName"><b>Item Name</b></label>
+        <input id="ItemName" type="text" class="form-control" placeholder="Item Name" name="itemName" [(ngModel)]="_editItem.name" />
+      </div>
+      <div class="form-group">
+        <label for="ItemPrice"><b>Item Price</b></label>
+        <input id="ItemPrice" type="text" class="form-control" placeholder="Item Price" name="itemPrice" [(ngModel)]="_editItem.price" />
+      </div>
+      <div class="form-group">
+        <label for="ItemQuantity"><b>Item Quantity</b></label>
+        <input id="ItemQuantity" type="text" class="form-control" placeholder="Item Quantity" name="itemQuantity" [(ngModel)]="_editItem.quantity" />
+      </div>
+      <div class="form-group">
+        <label for="ItemType"><b>Item Type</b></label>
+        <input id="ItemType" type="text" class="form-control" placeholder="Item Type" name="itemType" [(ngModel)]="_editItem.type" />
+      </div>
+      <button class="btn btn-primary" (click)="UpdateItem()">Save Changes</button>
+      <button class="btn btn-primary" routerLink="/home">Cancel</button>
+
+    </form>
+  </div>
+
+</body>
+</html>

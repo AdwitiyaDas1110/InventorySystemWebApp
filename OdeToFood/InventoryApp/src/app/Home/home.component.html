@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Inventory App</title>
+  
+</head>
+<body>
+  <div style="margin : 20px">
+    <h1 style="text-align:center">Welcome to Inventory App</h1>
+  </div>
+  <div class="container">
+    <table class="table" style="text-align:center">
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Type</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr *ngFor="let product of inventory">
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.quantity}}</td>
+        <td>{{product.type}}</td>
+        <td><button class="btn btn-primary active" (click)="DeleteItem(product.id)">Delete item</button></td>
+        <td><button class="btn btn-primary active" (click)="EditItem(product.id)">Edit item</button></td>
+      </tr>
+    </table>
+    <div style="position:relative; margin-left:45% ; margin-top:40px;">
+      <button class="btn btn-primary active" routerLink="/add-item">Add a new item</button>
+    </div>
+  </div>
+  
+</body>
+</html>
